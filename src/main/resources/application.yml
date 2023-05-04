@@ -1,0 +1,3 @@
+management:  endpoints:    web:      exposure:        include:        - health        - info        - threaddump        - metrics        exclude:        - mappings        - env      base-path: /management              
+spring:
+  application:    name: smart-service  config:    import:    - optional:configserver:http://localhost:8888  cloud:    discovery:      enabled: false
